@@ -68,10 +68,34 @@ Menampilkan lokasi semua tempat wisata dalam satu peta, serta lokasi pengguna sa
 
 ## 📝 Form Tambah & Edit Wisata
 
-Form untuk menambah atau mengubah data wisata, termasuk memilih titik koordinat melalui peta.
+Form untuk menambah atau mengubah data wisata.
 
 <p align="center">
   <img src="assets/images/form.png" width="230">
+</p>
+
+---
+
+Memilih gambar dengan Image Picker.
+
+<p align="center">
+  <img src="assets/images/gambar.png" width="230">
+</p>
+
+---
+
+Memilih jam operasional wisata dengan Time Picker.
+
+<p align="center">
+  <img src="assets/images/time.png" width="230">
+</p>
+
+---
+
+Memilih titik koordinat melalui peta.
+
+<p align="center">
+  <img src="assets/images/tambahpeta.png" width="230">
 </p>
 
 ---
