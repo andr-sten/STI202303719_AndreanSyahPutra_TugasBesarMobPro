@@ -8,10 +8,10 @@ class NavigationMenu extends StatefulWidget {
   const NavigationMenu({super.key});
 
   @override
-  State<NavigationMenu> createState() => _NavigationMenuState();
+  State<NavigationMenu> createState() => NavigationMenuState();
 }
 
-class _NavigationMenuState extends State<NavigationMenu> {
+class NavigationMenuState extends State<NavigationMenu> {
   int _selectedIndex = 0;
 
   // Daftar halaman sesuai urutan tab
@@ -22,12 +22,16 @@ class _NavigationMenuState extends State<NavigationMenu> {
     const AboutScreen(),
   ];
 
+  void changeTab(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Body akan berganti sesuai index yang dipilih
       body: _screens[_selectedIndex],
-
       bottomNavigationBar: NavigationBar(
         height: 80,
         elevation: 0,
@@ -45,7 +49,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
             icon: Icon(Icons.map_outlined),
             selectedIcon: Icon(Icons.map),
             label: 'Maps',
-          ),
+          ), // Ini index ke-2
           NavigationDestination(
             icon: Icon(Icons.info_outline),
             selectedIcon: Icon(Icons.info),
@@ -55,4 +59,6 @@ class _NavigationMenuState extends State<NavigationMenu> {
       ),
     );
   }
+
+  void pushReplacement(MaterialPageRoute materialPageRoute) {}
 }

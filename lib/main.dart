@@ -1,36 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart'; // Import
 import 'config/theme.dart';
-import 'intro/splash_screen.dart'; // Import Splash Screen
-import 'navigation_menu.dart'; // Tetap di-import untuk referensi type jika butuh
+import 'navigation_menu.dart';
+import 'screens/intro/splash_screen.dart'; // Import splash screen
 
-// 1. DEFINISI GLOBAL KEY (Agar bisa dipanggil dari Splash Screen)
-// Ini berguna jika nanti kamu butuh kontrol navigasi dari luar context
-final GlobalKey<NavigatorState> navKey = GlobalKey<NavigatorState>();
+// 1. Definisikan Global Key ini di area global (di luar class apapun)
+final GlobalKey<NavigationMenuState> navKey = GlobalKey<NavigationMenuState>();
+void main() async {
+  // Pastikan binding terinisialisasi sebelum akses SharedPreferences
+  WidgetsFlutterBinding.ensureInitialized();
+  // Muat preferensi tema yang tersimpan
+  final prefs = await SharedPreferences.getInstance();
+  final isDark = prefs.getBool('isDark') ?? false; // Default Light (false)
 
-void main() {
-  runApp(const MyApp());
+  runApp(MyApp(initialIsDark: isDark));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  final bool initialIsDark;
+  const MyApp({super.key, required this.initialIsDark});
+
+  // Method statis agar bisa dipanggil dari mana saja untuk ganti tema
+  static void toggleTheme(BuildContext context) {
+    context.findAncestorStateOfType<_MyAppState>()?.toggleTheme();
+  }
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  late bool _isDark;
+
+  @override
+  void initState() {
+    super.initState();
+    _isDark = widget.initialIsDark;
+  }
+
+  Future<void> toggleTheme() async {
+    setState(() {
+      _isDark = !_isDark;
+    });
+    // Simpan ke SharedPreferences
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('isDark', _isDark);
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Travel Wisata Lokal',
       debugShowCheckedModeBanner: false,
-
-      // Menggunakan konfigurasi tema dari file theme.dart
+      // Gunakan state _isDark untuk menentukan ThemeMode
+      themeMode: _isDark ? ThemeMode.dark : ThemeMode.light,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.system,
-
-      // 2. SET NAVIGATOR KEY (Opsional, tapi praktik bagus jika punya navKey global)
-      navigatorKey: navKey,
-
-      // 3. UBAH HOME KE SPLASH SCREEN
-      // Aplikasi akan mulai dari intro dulu, baru pindah ke NavigationMenu
-      home: const SplashScreen(),
+      home: const SplashScreen(), // Tampilkan SplashScreen terlebih dahulu
     );
   }
 }

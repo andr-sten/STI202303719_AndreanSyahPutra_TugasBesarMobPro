@@ -30,7 +30,7 @@ class AboutScreen extends StatelessWidget {
           ),
           const Text(
             "Tim Pengembang Aplikasi",
-            style: TextStyle(color: Colors.grey),
+            style: TextStyle(color: Colors.grey, fontSize: 18),
           ),
           const SizedBox(height: 20),
           const Divider(height: 1),

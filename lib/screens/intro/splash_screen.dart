@@ -136,11 +136,11 @@ class _SplashScreenState extends State<SplashScreen>
               child: Padding(
                 padding: const EdgeInsets.only(top: 12),
                 child: Text(
-                  "Kelola wisata lokal sekitar dengan mudah",
+                  "Kelola wisata sekitar dengan mudah",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: 'AppFont',
-                    fontSize: 14,
+                    fontSize: 20,
                     letterSpacing: 0.5,
                     color: isDark ? Colors.white70 : Colors.black54,
                   ),
