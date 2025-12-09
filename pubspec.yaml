@@ -11,7 +11,8 @@ dependencies:
     sdk: flutter
   # Utilitas
   cupertino_icons: ^1.0.2
-  intl: ^0.18.0 # Untuk format tanggal
+  intl: ^0.20.2 # Untuk format tanggal
+  permission_handler: ^11.3.1 # Untuk minta izin lokasi
 
   # Database (Tugas Anggota 4)
   sqflite: ^2.3.0
@@ -19,23 +20,33 @@ dependencies:
 
   # Maps & Lokasi (Tugas Anggota 4 & 5)
   google_maps_flutter: ^2.5.0
-  # geolocator: ^10.1.0 # Opsional jika butuh lokasi user
 
   # Gambar (Tugas Anggota 3 & 5)
   image_picker: ^1.0.4
+  uuid: ^4.5.2
+  shared_preferences: ^2.5.3
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png" # ikon utama (1024x1024)
+
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/logo/icon.png"
 
 flutter:
   uses-material-design: true
 
-  # Tambahkan bagian ini:
   fonts:
-    - family: AppFont # Kita namakan "AppFont" agar mudah dipanggil
+    - family: AppFont
       fonts:
         - asset: assets/fonts/MyFont-Regular.ttf
         - asset: assets/fonts/MyFont-Bold.ttf
-          weight: 700 # Menandakan ini versi Bold
+          weight: 700
