@@ -76,6 +76,26 @@ Form untuk menambah atau mengubah data wisata, termasuk memilih titik koordinat 
 
 ---
 
+## 🔍 Halaman Pencarian
+
+Pada halaman ini pengguna dapat mencari wisata dengan kata kunci nama wisata atau lokasi wisata.
+
+<p align="center">
+  <img src="assets/images/cari.png" width="230">
+</p>
+
+---
+
+## ✏️ Halaman About
+
+Menampilkan nama pengembang aplikasi.
+
+<p align="center">
+  <img src="assets/images/about.png" width="230">
+</p>
+
+---
+
 ## ✨ Fitur Utama
 
 - **CRUD Lengkap**: Tambah, lihat, edit, hapus data wisata.
