@@ -23,7 +23,7 @@ Aplikasi mobile berbasis Flutter untuk menemukan dan mengelola destinasi wisata 
 Tampilan awal aplikasi dengan desain modern dan animasi ringan.
 
 <p align="center">
-  <img src="assets/images/splash.png" width="230">
+  <img src="assets/images/splash.jpg" width="230">
 </p>
 
 ---
@@ -35,13 +35,27 @@ Berisi daftar wisata dengan pencarian, filter, dan kartu informasi wisata.
 ### Light Mode
 
 <p align="center">
-  <img src="assets/images/home_light.png" width="230">
+  <img src="assets/images/home_light.jpg" width="230">
 </p>
+
+---
+
+<p align="center">
+  <img src="assets/images/home_light2.jpg" width="230">
+</p>
+
+---
 
 ### Dark Mode
 
 <p align="center">
-  <img src="assets/images/home_dark.png" width="230">
+  <img src="assets/images/home_dark.jpg" width="230">
+</p>
+
+---
+
+<p align="center">
+  <img src="assets/images/home_dark2.jpg" width="230">
 </p>
 
 ---
@@ -51,7 +65,21 @@ Berisi daftar wisata dengan pencarian, filter, dan kartu informasi wisata.
 Menampilkan detail lengkap seperti foto, deskripsi, rating, harga tiket, dan jam operasional.
 
 <p align="center">
-  <img src="assets/images/detail.png" width="230">
+  <img src="assets/images/detail.jpg" width="230">
+</p>
+
+---
+
+<p align="center">
+  <img src="assets/images/detail2.jpg" width="230">
+</p>
+
+---
+
+Terdapat tombol elipsis untuk edit / hapus dengan dialog konfirmasi
+
+<p align="center">
+  <img src="assets/images/dialoghapus.jpg" width="230">
 </p>
 
 ---
@@ -68,10 +96,60 @@ Menampilkan lokasi semua tempat wisata dalam satu peta, serta lokasi pengguna sa
 
 ## 📝 Form Tambah & Edit Wisata
 
-Form untuk menambah atau mengubah data wisata, termasuk memilih titik koordinat melalui peta.
+Form untuk menambah atau mengubah data wisata.
 
 <p align="center">
-  <img src="assets/images/form.png" width="230">
+  <img src="assets/images/form.jpg" width="230">
+</p>
+
+---
+
+Memilih gambar dengan Image Picker.
+
+<p align="center">
+  <img src="assets/images/gambar.jpg" width="230">
+</p>
+
+---
+
+Memilih jam operasional wisata dengan Time Picker.
+
+<p align="center">
+  <img src="assets/images/time.jpg" width="230">
+</p>
+
+---
+
+Memilih titik koordinat melalui peta.
+
+<p align="center">
+  <img src="assets/images/tambahpeta.jpg" width="230">
+</p>
+
+---
+
+<p align="center">
+  <img src="assets/images/tambahpeta2.jpg" width="230">
+</p>
+
+---
+
+## 🔍 Halaman Pencarian
+
+Pada halaman ini pengguna dapat mencari wisata dengan kata kunci nama wisata atau lokasi wisata.
+
+<p align="center">
+  <img src="assets/images/cari.jpg" width="230">
+</p>
+
+---
+
+## ✏️ Halaman About
+
+Menampilkan nama pengembang aplikasi.
+
+<p align="center">
+  <img src="assets/images/about.jpg" width="230">
 </p>
 
 ---
